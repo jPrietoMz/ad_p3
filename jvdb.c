@@ -10,6 +10,7 @@ int main(int argc,char *argv[]){
         Uso:
         jvdb.exe [operacion] [basededatos] [coleccion] [documento] [contenido]
     */
+        
     if(strcmp(operacion,"select") == 0){
         char *documento = argv[4];
         char ruta[100];
@@ -53,7 +54,7 @@ int main(int argc,char *argv[]){
         }else{
             printf("ko");
         }
-    }else{
+   }else{
         printf("operación no válida");
     }
     
