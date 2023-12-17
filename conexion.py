@@ -1,22 +1,7 @@
-import subprocess
-
-class Ad_p3:
-    def __init__(self,basededatos):
-        self.basededatos = basededatos
-    def insert(self,coleccion,documento,contenido):
-        self.operacion="insert"
-        self.coleccion=coleccion
-        self.documento=documento
-        self.contenido=contenido
-        comando = '"C:\\Users\\JOSE7PM\\Documents\\GitHub\\ad_p3\\jvdb.exe" '+self.operacion+' '+self.basededatos+' '+self.coleccion+' '+self.documento+'   "'+self.contenido+'"'
-        resultado = subprocess.run(comando, shell=True, stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
-
-        if resultado.returncode == 0:
-            return ("ok")
-        else:
-            return("ko")
+from jvdb_conector import Ad_p3
 
 Conexion1 = Ad_p3("miempresa")
-Conexion1.insert("clientes","cliente9","este es otro contenido de prueba")
+Conexion1.insert("clientes","cliente10","este es otro contenido de prueba")
 
                 
+ 
